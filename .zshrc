@@ -12,7 +12,7 @@ fi
 setopt interactivecomments
 
 # this on top of autocomplete fixes "unhandled ZLE widget"
-source $PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $PLUGINS_DIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # higher precedence than other plugins
 source $PLUGINS_DIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh

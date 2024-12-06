@@ -89,7 +89,7 @@ echo "set-option -g default-shell /bin/zsh" >> $HOME/.tmux.conf
 
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $PLUGINS_DIR/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $PLUGINS_DIR/zsh-autocomplete
-git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $PLUGINS_DIR/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlighting $PLUGINS_DIR/fast-syntax-highlighting
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
