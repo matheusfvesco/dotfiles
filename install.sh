@@ -79,10 +79,13 @@ fi
 # Create a symlink for the bin directory
 ln -s "$SCRIPT_DIR/bin" "$BIN_DIR"
 
-echo "Installing command-not-found (for zsh apt suggestions) and exa..."
+echo "Installing command-not-found (for zsh apt suggestions), exa and tmux..."
 sudo apt update
 sudo apt install command-not-found
 sudo apt install exa
+sudo apt install tmux
+
+echo "set-option -g default-shell /bin/zsh" >> $HOME/.tmux.conf
 
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $PLUGINS_DIR/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $PLUGINS_DIR/zsh-autocomplete
@@ -92,7 +95,7 @@ git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlightin
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # Change the default shell to zsh
-sudo chsh -s "$ZSH_PATH"
+chsh -s "$ZSH_PATH"
 
 # Check if the shell was changed successfully
 if [ $? -eq 0 ]; then
