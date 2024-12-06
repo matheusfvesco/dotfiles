@@ -8,8 +8,8 @@ if [ ! -d $PLUGINS_DIR ]; then
     mkdir "$PLUGINS_DIR"
 fi
 # higher precedence
-source $PLUGINS_DIR/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $PLUGINS_DIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /etc/zsh_command_not_found # sudo apt install command-not-found
 
