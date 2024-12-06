@@ -85,7 +85,11 @@ sudo apt install command-not-found
 sudo apt install exa
 sudo apt install tmux
 
+# sets default shell
 echo "set-option -g default-shell /bin/zsh" >> $HOME/.tmux.conf
+
+# creates root folder for autocompletions
+mkdir $HOME/.zfunc
 
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $PLUGINS_DIR/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $PLUGINS_DIR/zsh-autocomplete

@@ -33,14 +33,11 @@ fi
 # this can be used to set aliases for your specific environment
 [[ -f $HOME/.aliases.local ]] && source $HOME/.aliases.local
 
+# loads all autocompletions from ~/.zfunc
+for file in "$HOME/.zfunc"/*; do
+    [ -f "$file" ] && source "$file"
+done
 
-# Check if poetry is installed and sets up completions
-if command -v poetry &> /dev/null; then
-    [ ! -f ~/.zfunc ] && mkdir -p ~/.zfunc &> /dev/null
-    [ ! -f ~/.zfunc/_poetry ] && poetry completions zsh > ~/.zfunc/_poetry
-    fpath+=~/.zfunc
-    autoload -Uz compinit && compinit
-fi
 
 # uses tmux as the default terminal in ssh incoming connections                                                                                        
 if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then                                                            
