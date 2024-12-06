@@ -1,4 +1,4 @@
-# devcontainers-dotfiles
+# Dotfiles
 
 My own dotfiles, made with simplicity in mind.
 
