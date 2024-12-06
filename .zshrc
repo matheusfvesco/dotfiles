@@ -7,9 +7,16 @@ PLUGINS_DIR="$HOME/.zsh_addons"
 if [ ! -d $PLUGINS_DIR ]; then
     mkdir "$PLUGINS_DIR"
 fi
-# higher precedence
-source $PLUGINS_DIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+# REALLY IMPORTANT FOR AUTOCOMPLETE
+setopt interactivecomments
+
+# this on top of autocomplete fixes "unhandled ZLE widget"
 source $PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# higher precedence than other plugins
+source $PLUGINS_DIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 source $PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /etc/zsh_command_not_found # sudo apt install command-not-found
 
