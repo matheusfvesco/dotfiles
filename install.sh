@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Check if zsh is installed and do nothing if not
-if ! command -v zsh >/dev/null 2>&1; then
-  echo "zsh is not installed. Please install zsh and rerun this script."
-  exit 1
-fi
+sudo apt update && sudo apt install zsh
 
 # Get the path of zsh
 ZSH_PATH=$(which zsh)
