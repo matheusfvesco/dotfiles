@@ -79,6 +79,8 @@ fi
 # Create a symlink for the bin directory
 ln -s "$SCRIPT_DIR/bin" "$BIN_DIR"
 
+tourch $HOME/.aliases.local
+
 echo "Installing command-not-found (for zsh apt suggestions), exa and tmux..."
 sudo apt update
 sudo apt install command-not-found
@@ -132,6 +134,10 @@ if [[ $install_font == "y" ]]; then
   # Delete the zip file
   rm -f "$FONT_ZIP"
   echo "FiraCode Nerd Font has been installed successfully in $FONTS_DIR."
+  
+  # install font system wide
+  sudo cp "$FONTS_DIR"/* /usr/local/share/fonts/
+  echo "FiraCode Nerd Font has been installed successfully system-wide"
 
   # clears font cache
   if command -v fc-cache &>/dev/null; then
