@@ -92,9 +92,19 @@ mkdir $HOME/.zfunc
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $PLUGINS_DIR/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $PLUGINS_DIR/zsh-autocomplete
 git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlighting $PLUGINS_DIR/fast-syntax-highlighting
+git clone --depth 1 https://github.com/Licheam/zsh-ask $PLUGINS_DIR/zsh-ask
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
+
+# Check if the bin directory doesn't exists
+if [ ! -d "$HOME/.zfunc" ]; then
+  mkdir "$HOME/.zfunc"
+fi
+# checks if _eg is in the zfunc folder
+if [ ! -f "$HOME/.zfunc/_eg" ]; then
+  touch "$HOME/.zfunc/_eg"
+fi
 
 # Change the default shell to zsh
 chsh -s "$ZSH_PATH"
