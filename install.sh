@@ -81,6 +81,8 @@ echo "Installing command-not-found (for zsh apt suggestions), exa and tmux..."
 sudo apt update
 sudo apt install command-not-found
 sudo apt install exa
+sudo apt install eza
+sudo apt install jq
 sudo apt install tmux
 
 # sets default shell
@@ -92,7 +94,7 @@ mkdir $HOME/.zfunc
 git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $PLUGINS_DIR/zsh-autosuggestions
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $PLUGINS_DIR/zsh-autocomplete
 git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlighting $PLUGINS_DIR/fast-syntax-highlighting
-git clone --depth 1 https://github.com/Licheam/zsh-ask $PLUGINS_DIR/zsh-ask
+git clone --depth 1 https://github.com/matheusfvesco/zsh-ask $PLUGINS_DIR/zsh-ask
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
