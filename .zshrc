@@ -26,11 +26,6 @@ if ! [[ ":$PATH:" == *":$HOME/bin:"* ]]; then
     export PATH="$HOME/bin:$PATH"
 fi
 
-# zsh-ask settings
-export ZSH_ASK_API_URL="http://127.0.0.1:11434/v1/chat/completions"
-export ZSH_ASK_MODEL="llama3.2:3b"
-
-
 # Check if .aliases exists and sources it
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
 
